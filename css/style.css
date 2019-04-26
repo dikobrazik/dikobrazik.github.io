@@ -1,0 +1,98 @@
+:root {
+    --header-bg-color: #28a745;
+    --header-light-bg-color: #28a745aa;
+}
+html {
+    width: 100%;
+    height: 150%;
+}
+body{
+    width: 99vw;
+    height: 150%;
+}
+header{
+    padding-top: 0;
+    padding-bottom: 1vh;
+}
+@font-face {
+    font-family: VestiSans; 
+    src: url(fonts/16387.ttf);
+}
+@font-face {
+    font-family: VestiSansLight; 
+    src: url(fonts/16384.ttf);
+}
+@media (max-width: 959.98px) {
+    #mainnav{font: 1em  VestiSans;}
+    @keyframes hideheader {
+        from {background-color: var(--header-bg-color);}  
+        to {background-color: var(--header-light-bg-color);color:rgb(171, 172, 171);font-size: 1em; height: 6vh;}
+    }
+    @keyframes showheader {
+        from {background-color: var(--header-light-bg-color);color:rgb(171, 172, 171);font-size: 1em; height: 6vh;}
+        to {background-color: var(--header-bg-color);color:white;font-size: 1em; height: 10vh;}
+        
+    }
+}
+@media (min-width: 960px) {
+    #mainnav{font: 1.3em  VestiSans;}
+    @keyframes hideheader {
+        from {background-color: var(--header-bg-color);}  
+        to {background-color: var(--header-light-bg-color);color:rgb(171, 172, 171);font-size: 1.1em; height: 6vh;}
+    }
+    @keyframes showheader {
+        from {background-color: var(--header-light-bg-color);color:rgb(171, 172, 171);font-size: 1.1em; height: 6vh;}
+        to {background-color: var(--header-bg-color);color:white;font-size: 1.3em; height: 10vh;}
+        
+    }
+}
+#strip{
+    font: 0.8em VestiSansLight;
+    background-color: #124e20;
+    color:black;
+    height: 3vh;
+}
+.navbar-toggler-icon{
+    background-image: url('https://img.icons8.com/material-outlined/96/000000/menu.png')
+}
+#mainnav{
+    height: 10vh;
+}
+#navbarNavAltMarkup{background-color: var(--header-bg-color);}
+.navbar-nav>a:hover{animation: linkhover 0.2s ease-in-out both;}
+.navbar-nav>a{color:white;}
+#striplinks>a:hover{animation: striphover 0.2s ease-in-out both;}
+#striplinks>a{color:white;}
+#mainnav.hide{animation: hideheader 0.5s ease-in-out both;}
+#mainnav.show{animation: showheader 0.5s ease-in-out both;}
+@keyframes linkhover {
+    from {color: rgba(255,255,255,1);}  
+    to {color: rgb(51, 58, 31);}
+}
+@keyframes striphover {
+    from {background-color: #124e20;}  
+    to {background-color: #124e20;color:rgba(255, 255, 255, 0.651);}
+}
+
+
+article{
+    min-height: 100%;
+}
+footer{
+    margin-top: -10vh;
+    height: 10vh;
+    width: 100%;
+    background-color: var(--header-bg-color);
+}
+
+.mainblock{
+    margin:0px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background-color: rgb(211, 255, 220)
+}
+
+.content{
+    border-left: 0.1vw solid rgb(25, 120, 39);
+    border-right: 0.1vw solid rgb(25, 120, 39);
+}
