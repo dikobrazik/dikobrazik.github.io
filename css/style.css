@@ -96,3 +96,7 @@ footer{
     border-left: 0.1vw solid rgb(25, 120, 39);
     border-right: 0.1vw solid rgb(25, 120, 39);
 }
+img{
+    width: 100%;
+    height: auto;
+}
