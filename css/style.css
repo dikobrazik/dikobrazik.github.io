@@ -108,6 +108,18 @@ aside{
     color:white;
     line-height: 5px;
 }
+a:any-link{
+    font-size: 1em;
+    color:white;
+    line-height: 5px;
+}
+a:any-link:hover{
+    font-size: 1em;
+    color:white;
+    line-height: 5px;
+    text-decoration-line: none;
+    animation: linkhover 0.2s ease-out both;
+}
 .footer-link:hover{
     font-size: 1em;
     color:white;
