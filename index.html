@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="Description" content="Author: dikobrazik">
@@ -36,11 +36,11 @@
                     </div>
             </nav>
             <nav class="navbar sticky-top navbar-expand-md bg-success p-0 " id="mainnav">
-                <!-- <a class="navbar-brand" href="#">
-                    <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-                    Bootstrap
-                </a> -->
-                <button class="navbar-toggler bg-success ml-4" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand text-white ml-4" style="display: inline-block;"  href="#">
+                    <div class="m-0" style="display: inline-block; vertical-align: middle; font-family:Marker Felt, fantasy;letter-spacing: 0.1em;font-size: 2em;text-shadow: 1px 1px 2px black;">KZN</div>
+                    <img src="./image/brand.svg" style="width:50px;height:50px; vertical-align: middle;" alt="">
+                </a>
+                <button class="navbar-toggler bg-transparent mx-4" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse d-sm-none d-md-flex col flex-row-reverse">
@@ -105,8 +105,57 @@
             </div>
         </article>
         <footer class="navbar sticky-bottom">
-            <div class="container">
-
+            <div class="container col-xl-12 col-lg-12 align-items-start">
+                <aside class="col-xl-3 col-lg-3  p-0">
+                    <h2 class="col_title">Продукты и услуги</h2>
+                    <div class="border-top">
+                        <ul class="list">
+                            <li><a class="footer-link" href="#">Компьютеры</a></li>
+                            <li><a class="footer-link" href="#">Ноутбуки</a></li>
+                            <li><a class="footer-link" href="#">Ремонт смартфонов</a></li>
+                            <li><a class="footer-link" href="#">Восстановление экрана iPhone</a></li>
+                            <li><a class="footer-link" href="#">Восстановление экрана iPad</a></li>
+                            <li><a class="footer-link" href="#">Восстановление экрана Samsung</a></li>
+                            <li><a class="footer-link" href="#">Восстановление экрана chinaPhone</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <aside class="col-xl-2 col-lg-2  p-0">
+                    <h2 class="col_title">Поддержка</h2>
+                    <div  class="border-top">
+                        <ul class="list">
+                            <li><a class="footer-link" href="#">Заявка на помощь</a></li>
+                            <li><a class="footer-link" href="#">Онлайн-помощь</a></li>
+                            <li><a class="footer-link" href="#">Информация о гарантии</a></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </aside>
+                <aside class="col-xl-2 col-lg-2  p-0">
+                    <h2 class="col_title">О компании</h2>
+                    <div  class="border-top">
+                        <ul class="list">
+                            <li><a class="footer-link" href="#">Блог</a></li>
+                            <li><a class="footer-link" href="#">О компании</a></li>
+                            <li><a class="footer-link" href="#">Работа в компании</a></li>
+                            <li><a class="footer-link" href="#">Политика конфиденциальности</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <aside class="col-xl-4 col-lg-4  p-0">
+                    <h2 class="col_title">Контакты</h2>
+                    <div  class="border-top">
+                        <ul class="list">
+                            <li><p class="text-white">По всем вопросам, связанным с заказами или общими вопросами, пожалуйста, обращайтесь</p></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+            <div class="border-top col-12" id="copyright">
+                <p class="text-white text-center" style="font-size: 0.7em">© Copyright 2019 PC Laptops. All Rights Reserved. Appearance and configurations may vary.</p>
             </div>
         </footer>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -126,7 +175,22 @@
                     document.getElementById('mainnav').classList.remove('fixed-top','hide')
                     document.getElementById('mainnav').style.backgroundColor = '#28a745'
                 }
+                if((document.body.scrollHeight-window.innerHeight)-y < 100){
+                    document.getElementById('mainnav').classList.add('d-none')
+                }else {
+                    document.getElementById('mainnav').classList.remove('d-none')
+                }
             }
+            const footerResize = (e) =>{
+                if(window.innerWidth < 992){
+                    document.getElementsByTagName('footer')[0].style.height = (document.querySelector('div.container').offsetHeight+document.querySelector('div#copyright').offsetHeight + 20)+'px';
+                }else{
+                    document.getElementsByTagName('footer')[0].style.height = '40vh'
+                }
+            }
+            document.body.addEventListener('DOMContentLoaded',footerResize());
+            document.body.onresize = footerResize;
+            
             for(var i = 0; i < document.getElementsByClassName('carousel-item').length; i++){
                 //document.getElementsByClassName('carousel-item')[i].getElementsByTagName('img')[0].style.height = '60vh'
             }

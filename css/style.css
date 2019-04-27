@@ -58,6 +58,9 @@ header{
 #mainnav{
     height: 10vh;
 }
+.navbar-toggler:focus{
+    outline-width: 0px;
+}
 #navbarNavAltMarkup{background-color: var(--header-bg-color);}
 .navbar-nav>a:hover{animation: linkhover 0.2s ease-in-out both;}
 .navbar-nav>a{color:white;}
@@ -74,15 +77,43 @@ header{
     to {background-color: #124e20;color:rgba(255, 255, 255, 0.651);}
 }
 
-
 article{
     min-height: 100%;
 }
 footer{
-    margin-top: -10vh;
-    height: 10vh;
+    margin-top: 3vh;
+    height: 40vh;
     width: 100%;
     background-color: var(--header-bg-color);
+}
+
+aside{
+    margin-top: 5vh;
+}
+
+.col_title{
+    font-size: 1.4em;
+    color:white;
+}
+
+.list{
+    list-style: none;
+    padding: 0;
+}
+.list>li{
+    padding-top: 5px;
+}
+.footer-link{
+    font-size: 1em;
+    color:white;
+    line-height: 5px;
+}
+.footer-link:hover{
+    font-size: 1em;
+    color:white;
+    line-height: 5px;
+    text-decoration-line: none;
+    animation: linkhover 0.2s ease-out both;
 }
 
 .mainblock{
