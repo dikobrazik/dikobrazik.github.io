@@ -315,11 +315,13 @@
                 }
                 if(window.innerWidth>576){
                     for(var i = 0 ; i < document.querySelectorAll('.issues>li').length; i++){
-                        document.querySelectorAll('.issues>li')[0].style.height = '7vh'
+                        document.querySelectorAll('.issues>li')[i].style.height = '7vh'
+                        document.querySelectorAll('.issues>li')[i].style.padding = '10px'
                     }
                 }else{
                     for(var i = 0 ; i < document.querySelectorAll('.issues>li').length; i++){
-                        document.querySelectorAll('.issues>li')[0].style.height = ''
+                        document.querySelectorAll('.issues>li')[i].style.height = '15vh'
+                        document.querySelectorAll('.issues>li')[i].style.padding = '0'
                     }
                 }
             }
