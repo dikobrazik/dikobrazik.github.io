@@ -306,6 +306,13 @@
                 }else {
                     document.getElementById('mainnav').classList.remove('d-none')
                 }
+            }
+            const footerResize = (e) =>{
+                if(window.innerWidth < 992){
+                    document.getElementsByTagName('footer')[0].style.height = (document.querySelector('div.container').offsetHeight+document.querySelector('div#copyright').offsetHeight + 20)+'px';
+                }else{
+                    document.getElementsByTagName('footer')[0].style.height = '40vh'
+                }
                 if(window.innerWidth>576){
                     for(var i = 0 ; i < document.querySelectorAll('.issues>li').length; i++){
                         document.querySelectorAll('.issues>li')[0].style.height = '7vh'
@@ -314,13 +321,6 @@
                     for(var i = 0 ; i < document.querySelectorAll('.issues>li').length; i++){
                         document.querySelectorAll('.issues>li')[0].style.height = ''
                     }
-                }
-            }
-            const footerResize = (e) =>{
-                if(window.innerWidth < 992){
-                    document.getElementsByTagName('footer')[0].style.height = (document.querySelector('div.container').offsetHeight+document.querySelector('div#copyright').offsetHeight + 20)+'px';
-                }else{
-                    document.getElementsByTagName('footer')[0].style.height = '40vh'
                 }
             }
             document.body.addEventListener('DOMContentLoaded',footerResize());
